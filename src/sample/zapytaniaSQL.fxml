@@ -13,7 +13,7 @@
    <children>
       <Pane maxWidth="-Infinity" prefHeight="200.0" prefWidth="1220.0" GridPane.vgrow="ALWAYS">
          <children>
-            <HBox fx:id="hBox1" prefHeight="39.0" prefWidth="1076.0">
+            <HBox fx:id="hBox1" layoutY="13.0" prefHeight="39.0" prefWidth="1076.0">
                <children>
                   <Label fx:id="labelCreateTable" prefHeight="26.0" prefWidth="122.0" text="CREATE TABLE">
                      <font>
@@ -31,7 +31,23 @@
                   <TextField fx:id="tekstFieldWartoscPoczatkowa" promptText="wartość początkowa np 1 lub UNSIGNED" />
                   <TextField fx:id="tekstFieldNotNull" prefHeight="25.0" prefWidth="75.0" text="NOT NULL " />
                   <TextField fx:id="tekstFieldAutoIncrement" prefHeight="25.0" prefWidth="72.0" text="AUTO_INCREMENT" />
-                  <Label fx:id="labelPrzecinek" text=",">
+               </children>
+            </HBox>
+            <TextField fx:id="tekstFieldWynikynik" layoutX="74.0" layoutY="88.0" prefHeight="25.0" prefWidth="1132.0" />
+            <Button fx:id="generujButton" layoutX="425.0" layoutY="126.0" mnemonicParsing="false" onAction="#generuj" text="Generuj" />
+            <HBox layoutX="84.0" layoutY="53.0" prefHeight="39.0" prefWidth="738.0">
+               <children>
+                  <TextField fx:id="tekstFieldNazwaKolumnyDoDodania" promptText="nazwa kolejnej kolumny" />
+                  <TextField fx:id="tekstFieldRozmiarDoDodania" promptText="rozmiar komurki np CHAR(3)" />
+                  <TextField fx:id="tekstFieldNotNullDoDodania" text="NOT NULL " />
+                  <TextField fx:id="tekstFieldDefaultDoDodania" text="DEFAULT " />
+                  <TextField fx:id="tekstFieldZakresDoDodania" promptText="zakres wartosci lub dla char ' '" />
+               </children>
+            </HBox>
+            <Button fx:id="dodajButton" layoutX="844.0" layoutY="53.0" mnemonicParsing="false" text="Dodaj kolejna kolumne" />
+            <HBox layoutX="99.0" layoutY="126.0" prefHeight="60.0" prefWidth="326.0">
+               <children>
+                  <Label fx:id="labelPrzecinek" text=" , ">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -49,8 +65,6 @@
                   </Label>
                </children>
             </HBox>
-            <TextField fx:id="tekstFieldWynikynik" layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="1035.0" />
-            <Button fx:id="generujButton" layoutX="1050.0" layoutY="27.0" mnemonicParsing="false" onAction="#generuj" text="Generuj" />
          </children>
       </Pane>
    </children>
