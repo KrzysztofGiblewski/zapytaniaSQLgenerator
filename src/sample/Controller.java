@@ -19,6 +19,8 @@ public class Controller {
     @FXML
     private Button generujButton;
     @FXML
+    private Button dodajButton;
+    @FXML
     private TextField tekstFieldNazwaTabeli;
     @FXML
     private TextField tekstFieldNazwaKolumny;
@@ -35,19 +37,48 @@ public class Controller {
     @FXML
     private TextField tekstFieldWynikynik;
     @FXML
-    private void generuj(){
+    private TextField tekstFieldNazwaKolumnyDoDodania;
+    @FXML
+    private TextField tekstFieldRozmiarDoDodania;
+    @FXML
+    private TextField tekstFieldNotNullDoDodania;
+    @FXML
+    private TextField tekstFieldDefaultDoDodania;
+    @FXML
+    private TextField tekstFieldZakresDoDodania;
+
+    @FXML
+    private TextField tekstFieldKolumny;
+
+    @FXML
+    private void dodaj() {
+        tekstFieldKolumny.setText(tekstFieldKolumny.getText()
+                + " " + tekstFieldNazwaKolumnyDoDodania.getText()
+                + " " + tekstFieldRozmiarDoDodania.getText()
+                + " " + tekstFieldNotNullDoDodania.getText()
+                + " " + tekstFieldDefaultDoDodania.getText()
+                + " " + tekstFieldZakresDoDodania.getText() + " , "
+        );
+    }
+
+    @FXML
+    private void generuj() {
         tekstFieldWynikynik.setText(labelCreateTable.getText()
-                +" "+tekstFieldNazwaTabeli.getText()
-                +" "+labelNawiasPoczatek.getText()
-                +" "+tekstFieldNazwaKolumny.getText()
-                +" "+tekstFieldRozmiar.getText()
-                +" "+tekstFieldWartoscPoczatkowa.getText()
-                +" "+tekstFieldNotNull.getText()
-                +" "+tekstFieldAutoIncrement.getText()
-                +" "+labelPrzecinek.getText()+" "
-                +" "+labelPrimaryKey.getText()+" "
-                +" "+tekstFieldNazwaPrimaryKey.getText()+" "
-                +" "+labelNawiasKoniec.getText());
+                + " " + tekstFieldNazwaTabeli.getText()
+                + " " + labelNawiasPoczatek.getText()
+                + " " + tekstFieldNazwaKolumny.getText()
+                + " " + tekstFieldRozmiar.getText()
+                + " " + tekstFieldWartoscPoczatkowa.getText()
+                + " " + tekstFieldNotNull.getText()
+                + " " + tekstFieldAutoIncrement.getText()
+                + " " + labelPrzecinek.getText() + " "
+
+                + tekstFieldKolumny.getText() //tekstField z kolumnami
+
+
+                + " " + labelPrimaryKey.getText() + " "
+                + " " + tekstFieldNazwaPrimaryKey.getText() + " "
+                + " " + labelNawiasKoniec.getText());
     }
 
 }
